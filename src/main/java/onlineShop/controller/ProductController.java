@@ -57,7 +57,7 @@ public class ProductController {
 			//Path path = Paths.get("/Users/xxx/products/" + product.getId() + ".jpg");
 
 			// windows
-			Path path = Paths.get("C:\\Users\\Ling Lok Ngai\\Desktop\\Laioffer\\LaiProject\\onlineshop product image\\" + product.getId() + ".jpg");
+			Path path = Paths.get("\\" + product.getId() + ".jpg");
 			try {
 				image.transferTo(new File(path.toString()));
 			} catch (IllegalStateException | IOException e) {
@@ -71,7 +71,7 @@ public class ProductController {
 	public String deleteProduct(@PathVariable(value = "productId") int productId) {
 		// for MAC : Path path = Paths.get("/Users/xxx/products/" + productId + ".jpg");
 		// For windows
-		Path path = Paths.get("C:\\Users\\Ling Lok Ngai\\Desktop\\Laioffer\\LaiProject\\onlineshop product image\\" + productId + ".jpg");
+		Path path = Paths.get("\\" + productId + ".jpg");
 
 		if (Files.exists(path)) {
 			try {
